@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!--Import Google Icon Font-->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <!-- Compiled and minified CSS -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" type="text/css" href="style.css"/>
+  <title>Status Posting System</title>
+</head>
+<body>
+  <!-- NAVIGATION BAR -->
+  <nav>
+    <div class="nav-wrapper indigo">
+      <a href="index.html" class="brand-logo" style="padding-left:20px">Status Posting System</a>
+      <!-- nav bar menu for medium to large screen -->
+      <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+      <ul class="right hide-on-med-and-down">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="poststatusform.php">Post</a></li>
+        <li><a href="searchstatus.html">Search</a></li>
+        <li><a href="about.html">About</a></li>
+      </ul>
+    </div>
+  </nav>
+  <!-- nav bar menu for mobile screen -->
+  <ul class="sidenav" id="mobile-demo">
+    <li><a href="index.html">Home</a></li>
+    <li><a href="poststatusform.php">Post</a></li>
+    <li><a href="searchstatus.html">Search</a></li>
+    <li><a href="about.html">About</a></li>
+  </ul>
+  <div class="container" style="margin-top:50px">
+    <!-- Form layout for Searching status -->
+    <form method="get" action="searchstatusprocess.php">
+      <!-- Input field for Search Status -->
+      <div class="input-field">
+        <input type="text" name="sStatus" pattern="[a-zA-Z0-9 ,.!?]+" placeholder="e.g. listening to Spotify" class="validate" required /><label for="sStatus">Enter Status: (required)</label>
+      </div>
+      <!-- Search Button -->
+      <input class="btn wave-effect waves-light blue" type="submit" value="Search" style="margin-top:40px"/></p>
+    </form>
+    <!-- Link to Homepage -->
+    <div>
+      <a href="index.html">Return to Homepage</a>
+    </div>
+  </div>
+  <!-- Compiled and minified JavaScript -->
+  <script type="text/Javascript" src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+  <!-- Initialization for the nav bar menu for mobile-sized screen -->
+  <script>
+    $(document).ready(function(){
+      $('.sidenav').sidenav();
+    });
+  </script>
+</body>
+</html>
